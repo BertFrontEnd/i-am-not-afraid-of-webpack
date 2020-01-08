@@ -1,3 +1,2 @@
 # i-am-not-afraid-of-webpack
-
-Based on a series of "Webpack articles From zero to hero"
+ Based on a series of articles "Webpack From zero to hero"

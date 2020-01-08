@@ -1,0 +1,19 @@
+{
+  "name": "i-am-not-afraid-of-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BertFrontEnd/i-am-not-afraid-of-webpack.git",
+  "author": "BertFrontEnd <Berton@yandex.ru>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development"
+  }
+}

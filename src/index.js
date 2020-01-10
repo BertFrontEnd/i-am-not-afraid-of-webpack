@@ -1,2 +1,2 @@
 import { hello } from './hello';
-hello('Dolly');
+hello('Dolly & Molly');

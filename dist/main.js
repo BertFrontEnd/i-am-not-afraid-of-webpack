@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hello\", function() { return hello; });\nconst hello = subject => console.log(`Hello ${subject}!`);\n\n//# sourceURL=webpack:///./src/hello.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"hello\", function() { return hello; });\nvar hello = function hello(subject) {\n  return console.log(\"Hello, \".concat(subject, \"!\"));\n};\n\n//# sourceURL=webpack:///./src/hello.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./src/hello.js\");\n\r\nObject(_hello__WEBPACK_IMPORTED_MODULE_0__[\"hello\"])('Berton!');\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hello__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hello */ \"./src/hello.js\");\n\nObject(_hello__WEBPACK_IMPORTED_MODULE_0__[\"hello\"])('Berton');\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

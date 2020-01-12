@@ -1,10 +1,20 @@
-module.exports = {
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+module.exports = (env = {}, argv = {}) => ({
+  devtool: 'source-map',
   module: {
     rules: [
       {
         test: /\.js$/,
         use: 'babel-loader',
       },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: 'file-loader',
+      },
     ],
   },
-};
+  plugins: [
+    argv.mode === 'development' ? new HtmlWebpackPlugin() : null,
+  ].filter(plugin => !!plugin),
+});

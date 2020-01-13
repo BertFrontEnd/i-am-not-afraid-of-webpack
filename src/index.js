@@ -1,12 +1,12 @@
 import { hello } from './hello';
-import johnCena from '../assets/unexpected.jpg';
+import johnCena from '../assets/unexpected.gif';
 import andHisNameIs from '../assets/and-his-name-is.mp3';
 
 hello('Berton');
 
 document.body.innerHTML = '<div id="myMemes"></div>';
 document.getElementById('myMemes').innerHTML = `
-  <h1>And his name is...</h1>
+  <h1>And his name is... John Cena!!!</h1>
   <img src='${johnCena}' />
 `;
 

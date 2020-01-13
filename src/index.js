@@ -1,10 +1,15 @@
 import { hello } from './hello';
-import myImage from '../assets/image.jpg';
+import johnCena from '../assets/unexpected.jpg';
+import andHisNameIs from '../assets/and-his-name-is.mp3';
 
 hello('Berton');
 
-document.body.innerHTML = '<div id="myImg"></div>';
-document.getElementById('myImg').innerHTML = `
-  <h1>Peugeot 407</h1>
-  <img src='${myImage}' />
+document.body.innerHTML = '<div id="myMemes"></div>';
+document.getElementById('myMemes').innerHTML = `
+  <h1>And his name is...</h1>
+  <img src='${johnCena}' />
 `;
+
+const audio = new Audio(andHisNameIs);
+const img = document.querySelector('#myMemes img');
+img.addEventListener('click', event => audio.play());

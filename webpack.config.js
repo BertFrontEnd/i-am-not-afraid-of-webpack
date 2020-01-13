@@ -20,6 +20,10 @@ module.exports = (env = {}, argv = {}) => ({
           },
         ],
       },
+      {
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        use: 'file-loader',
+      },
     ],
   },
   plugins: [

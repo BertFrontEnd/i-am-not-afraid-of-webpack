@@ -1,5 +1,6 @@
 import { hello } from './hello';
 import johnCena from '../assets/unexpected.gif';
+import '../assets/style.scss';
 import andHisNameIs from '../assets/and-his-name-is.mp3';
 
 hello('Berton');

@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (env = {}, argv = {}) => ({
   devtool: 'source-map',
@@ -26,11 +27,33 @@ module.exports = (env = {}, argv = {}) => ({
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          argv.mode === 'production'
+            ? MiniCssExtractPlugin.loader
+            : 'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
       },
     ],
   },
   plugins: [
     argv.mode === 'development' ? new HtmlWebpackPlugin() : null,
+    argv.mode === 'production'
+      ? new MiniCssExtractPlugin({
+          filename: '[name].css',
+          chunkFilename: '[id].css',
+        })
+      : null,
   ].filter(plugin => !!plugin),
 });
